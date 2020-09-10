@@ -180,12 +180,12 @@ a:hover {
   flex-shrink: 1;
   flex-grow: 1;
   background-color: white;
+  transition: transform 100ms linear;
 }
 
 .services__elem:hover {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 0px 10px 40px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-  transform: scale(1.05);
-  transition: transform 100ms linear;
+  transform: translateY(-5px);
 }
 
 .services__elem__desc {
@@ -196,28 +196,26 @@ a:hover {
   color: #233A46;
 }
 
-.services__elem:hover .services__elem__desc {
-  color: #049898;
-}
-
-.services__elem:hover .services__elem__arrow {
-  display: block;
-}
-
 .services__elem__price {
   font-family: 'CirceRegular';
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  opacity: 0.64;
   color: #233A46;
 }
 
 .services__elem__arrow {
+  display: block;
   left: 80%;
   bottom: 20%;
   position: relative;
-  display: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.services__elem:hover .services__elem__arrow {
+  visibility: visible;
+  opacity: 1;
 }
 
 .services__elem__text {
