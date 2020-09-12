@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #E5E5E5;
+  background-color: #FFFFFF;
 }
 
 .container--main {
@@ -21,7 +21,7 @@ body {
 
 .nav {
   top: 0;
-  padding: 24px 64px 5px;
+  padding: 27px 64px 16px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -30,6 +30,7 @@ body {
   transition: background-color 0.3s;
   animation-fill-mode: forwards;
   box-sizing: border-box;
+  border-bottom: solid 1px rgba(255, 255, 255, .28);
   left: 0;
 }
 
@@ -40,7 +41,8 @@ body {
 
 .nav__elem__menu-button {
   position: relative;
-  bottom: 4px;
+  bottom: 5px;
+  left: 20px;
   cursor: pointer;
 }
 
@@ -48,6 +50,7 @@ body {
   background-color: #233A46;
   transition: background-color 0.3s;
   animation-fill-mode: forwards;
+  border-color: transparent;
 }
 
 .nav__elem {
@@ -80,9 +83,9 @@ a:hover {
 .nav__elem--link:after {
   left: 0;
   bottom: 0;
-  top: 1px;
+  top: 27px;
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background-color: white;
   transition: transform .5s ease;
   transform: scaleX(0);
@@ -148,7 +151,6 @@ a:hover {
 }
 
 .video-overlay__button:hover {
-  box-shadow: 0px 10px 20px rgba(0, 196, 137, 0.18), 0px 2px 6px rgba(0, 196, 137, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04);
   cursor: pointer;
 }
 
@@ -181,10 +183,10 @@ a:hover {
   flex-grow: 1;
   background-color: white;
   transition: transform 100ms linear;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 0px 10px 40px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 .services__elem:hover {
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 0px 10px 40px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   transform: translateY(-5px);
 }
 
@@ -201,13 +203,13 @@ a:hover {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  color: #233A46;
+  color: #233A46; 
 }
 
 .services__elem__arrow {
   display: block;
   left: 80%;
-  bottom: 20%;
+  bottom: 20%;  
   position: relative;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
@@ -231,3 +233,62 @@ a:hover {
   width: 200px;
   height: 200px;
 }
+
+.tech {
+  padding-top: 86px;
+  background-color: pink;
+  box-sizing: border-box;
+}
+
+.tech__title {
+  margin: 0 0 48px;
+  font-family: 'CirceBold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  color: #233A46;
+}
+
+.tech__image {
+  width: 100%;
+}
+
+.tech__advice {
+  padding: 88px 64px 120px;
+  padding-top: 88px;
+  width: 35%;
+  background: #F4F4F9;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.tech__advice__title {
+  font-family: CirceBold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #233A46;
+}
+
+.tech__advice__content {
+  font-family: Circe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #233A46;
+  opacity: 0.72;
+}
+
+h4 {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
