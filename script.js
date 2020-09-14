@@ -12,3 +12,8 @@ var app = new Vue({
   	window.addEventListener('scroll', this.updateScroll);
   }
 });
+
+var swipeDoctors = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    speed: 400
+});

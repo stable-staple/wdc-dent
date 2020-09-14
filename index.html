@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Воронцов умный</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   </head>
   <body>
-    <video class="fullscreen-video" muted loop>
-      <source src="video/875.mp4" type="video/mp4">
-    </video>
     <div id="app">
+      <video class="video video--fullscreen" muted loop autoplay="on">
+        <source src="video/875.mp4" type="video/mp4">
+      </video>
       <div class="container--main">
         <nav class="nav" :class="{'nav--colored': scrollPosition > 100}">
           <div class="nav__flex-container">
@@ -44,7 +45,7 @@
           </div>
         </nav>
         <div class="video-overlay">
-          <h1 class="video-overlay__title">Открылись, чтобы подарить вам улыбку</h1>
+          <h1 class="video-overlay__title primary_heading">Открылись, чтобы подарить вам улыбку</h1>
           <p class="video-overlay__description">Наша стоматология заботится о том, чтобы пациенты были счастливы и здоровы.</p>
           <button class="video-overlay__btn">Записаться на прием</button>
         </div>
@@ -52,64 +53,66 @@
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Импланты и протезы</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Импланты и протезы</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Лечение и удаление зубов</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Лечение зубов</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <img src="img/services_children_dent.png" class="services__elem__image"/>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Исправление прикуса</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Удаление и реставрация</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Детская стоматология</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Детская стоматология</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
+            </div>
+            <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
+          </div>
+        </div>
+        <div class="services">
+          <div class="services__elem">
+            <div class="services__elem__image"></div>
+            <div class="services__elem__text">
+              <p class="services__elem__desc card_heading">Виниры и люминиры</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Детская стоматология</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Консультация</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Детская стоматология</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Отбеливание</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
-              <p class="services__elem__desc">Детская стоматология</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
-            </div>
-            <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
-          </div>
-          <div class="services__elem">
-            <div class="services__elem__image"></div>
-            <div class="services__elem__text">
-              <p class="services__elem__desc">Детская стоматология</p>
-              <p class="services__elem__price">от 10 000 руб.</p>
+              <p class="services__elem__desc card_heading">Гигиена полости рта</p>
+              <p class="services__elem__price card_desc">от 10 000 руб.</p>
             </div>
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
@@ -119,14 +122,18 @@
           <div class="tech__content">
             <h3 class="tech__content__title">Современные технологии</h3>
             <p class="tech__content__text">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы. Равным образом, граница обучения кадров способствует повышению качества вывода текущих активов. Но интерактивные прототипы, инициированные исключительно синтетически, разоблачены.</p>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19.375" stroke="#233A46" stroke-width="1.25"/>
-              <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="#233A46" stroke-width="1.82857"/>
-            </svg>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="20" fill="#233A46"/>
-              <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
-            </svg>
+            <a class="swipe-button" onclick="swipeDoctors.slidePrev()">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="19.375" stroke="var(--primary-color)" stroke-width="1.25"/>
+                  <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="var(--primary-color)" stroke-width="1.82857"/>
+              </svg>
+            </a>
+            <a class="swipe-button" onclick="swipeDoctors.slideNext()">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="var(--primary-color)"/>
+                <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
+              </svg>
+            </a>
           </div>
           <img class="tech__image" src="img/modern_tech.png" />
         </div>
@@ -135,18 +142,38 @@
           <div class="doctors__content">
             <h3 class="tech__content__title">Наша работа - ваше здоровье</h3>
             <p class="tech__content__text">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом.</p>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19.375" stroke="#233A46" stroke-width="1.25"/>
-              <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="#233A46" stroke-width="1.82857"/>
-            </svg>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="20" fill="#233A46"/>
-              <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
-            </svg>
+            <a class="swipe-button" onclick="swipeDoctors.slidePrev()">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="19.375" stroke="var(--primary-color)" stroke-width="1.25"/>
+                  <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="var(--primary-color)" stroke-width="1.82857"/>
+              </svg>
+            </a>
+            <a class="swipe-button" onclick="swipeDoctors.slideNext()">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="var(--primary-color)"/>
+                <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
+              </svg>
+            </a>
           </div>
-          <div class="doctors__card">
-            <p class="doctors__card__full-name">Романцов Александр Главвчев</p>
-            <p class="doctors__card__description"></p>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="doctors__card swiper-slide">
+                <p class="doctors__card__full-name">Романцов Александр Главвчев</p>
+                <p class="doctors__card__description">Главный врач, стоматолог, лицо клиники, умный</p>
+              </div>
+              <div class="doctors__card swiper-slide">
+                <p class="doctors__card__full-name">asdasda</p>
+                <p class="doctors__card__description">Главный врач, стоматолог, лицо клиники, умный</p>
+              </div>
+              <div class="doctors__card swiper-slide">
+                <p class="doctors__card__full-name">123123</p>
+                <p class="doctors__card__description"></p>
+              </div>
+              <div class="doctors__card swiper-slide">
+                <p class="doctors__card__full-name">sdfsdfl;sdfsdfkl;</p>
+                <p class="doctors__card__description"></p>
+              </div>
+            </div>
           </div>
         </div>
         <hr>
@@ -163,6 +190,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

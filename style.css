@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #2B3033;
+}
+
+.container--main {
+  margin: auto 7%;
+}
+
+
 @font-face {
   font-family: 'CirceBold';
   src: url('fonts/Circe-Bold.ttf') format("truetype");
@@ -6,6 +15,34 @@
 @font-face {
   font-family: 'CirceRegular';
   src: url('fonts/Circe-Regular.ttf') format("truetype");
+}
+
+.primary_heading {
+  font-family: 'CirceBold';
+  font-style: normal;
+  font-size: 48px;
+  line-height: 52px;
+  color: var(--primary-color);
+}
+
+.desc {
+
+}
+
+.card_heading {
+  font-family: 'CirceBold';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--primary-color);
+}
+
+.card_desc {
+  font-family: 'CirceRegular';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--primary-color);
 }
 
 a {
@@ -17,19 +54,15 @@ body {
   padding: 0;
 }
 
-.container--main {
-  margin: auto 64px;
-}
-
 .nav {
   top: 0;
   left: 0;
-  padding: 27px 64px 16px;
+  padding: 27px 7% 16px;
   width: 100%;
   position: fixed;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
   transition: background-color 0.3s;
   animation-fill-mode: forwards;
   box-sizing: border-box;
@@ -58,18 +91,18 @@ body {
 }
 
 .nav__elem__menu-btn:hover .nav__elem__menu-btn__svg__line {
-  stroke: #233A46;
-  fill: #233A46;
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 .nav__elem__menu-btn:hover .nav__elem__menu-btn__svg__text {
   stroke-width: 0.1px;
-  stroke: #233A46;
-  fill: #233A46;
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 .nav--colored {
-  background-color: #233A46;
+  background-color: #2B3033;
   border-color: transparent;
 }
 
@@ -84,54 +117,49 @@ body {
 
 .nav__whatsapp {
   text-decoration: none;
+  vertical-align: top;
   color: white;
-  font-family: CirceRegular;
+  font-family: 'CirceRegular';
   font-style: normal;
-  font-weight: 600;
   font-size: 14px;
 }
 
 .nav__whatsapp:before {
   display: inline;
+  vertical-align: top;
   content: url('img/contact_whatsapp.svg');
   margin-right: 4px;
   background-size: 20px 19px;
   height: 20px;
   width: 19px;
-  vertical-align: top;
 }
 
 .nav__phone {
+  vertical-align: top;
   text-decoration: none;
   color: white;
   font-family: CirceRegular;
   font-style: normal;
-  font-weight: 600;
   font-size: 14px;
 }
 
 .nav__phone:before {
   display: inline;
+  vertical-align: top;
   content: url('img/contact_phone.svg');
   margin-right: 4px;
   background-size: 20px 19px;
   height: 20px;
   width: 19px;
-  vertical-align: top;
-}
-
-.nav__elem--link__img {
-  vertical-align: top;
 }
 
 .nav__link {
   font-family: CirceRegular;
   font-style: normal;
-  font-weight: 600;
   font-size: 14px;
-
   text-decoration: none;
   color: white;
+  padding-bottom: 27px;
 }
 
 .nav__link:after {
@@ -145,6 +173,7 @@ body {
   height: 1.5px;
   background-color: white;
   transition: transform .3s ease;
+  border-radius: 40px;
   transform: scaleX(0);
 }
 
@@ -161,32 +190,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 64px;
-  margin-top: 8%;
+  margin: 8% 0 0 7%;
 }
 
 .video-overlay__title {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-family: 'CirceBold';
-  font-style: normal;
-  font-size: 48px;
-  line-height: 52px;
+  margin: 0 0 16px;
   color: #FFFFFF;
   width: 482px;
 }
 
 .video-overlay__description {
-  margin: 0;
-  margin-bottom: 48px;
+  margin: 0 0 48px 0;
   width: 368px;
-  font-family: Circe;
+  font-family: 'CirceRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
   color: #FFFFFF;
 }
 
@@ -207,7 +227,7 @@ body {
   cursor: pointer;
 }
 
-.fullscreen-video {
+.video--fullscreen {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -217,16 +237,14 @@ body {
   position: relative;
   bottom: 50px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-right: -25px;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   z-index: 0;
 }
 
 .services__elem {
   margin-right: 25px;
-  margin-top: 24px;
   min-width: 250px;
   flex-basis: 260px;
   max-width: 320px;
@@ -237,7 +255,10 @@ body {
   flex-grow: 1;
   background-color: white;
   transition: transform 100ms linear;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 0px 10px 40px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 
+              0px 10px 40px rgba(0, 0, 0, 0.04), 
+              0px 2px 6px rgba(0, 0, 0, 0.04), 
+              0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 .services__elem:hover {
@@ -245,19 +266,13 @@ body {
 }
 
 .services__elem__desc {
-  font-family: 'CirceBold';
-  font-size: 16px;
-  margin: 0;
-  line-height: 24px;
-  color: #233A46;
+  margin: 0 0 2px 0;
+  color: var(--primary-color);
 }
 
 .services__elem__price {
-  font-family: 'CirceRegular';
-  font-size: 14px;
-  line-height: 18px;
   margin: 0;
-  color: #233A46;
+  color: var(--primary-color);
   opacity: 0.64;
 }
 
@@ -282,16 +297,13 @@ body {
 
 .services__elem__image {
   display: block;
-  margin: 24px 55px 12px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 24px auto 12px;
   width: 200px;
   height: 200px;
 }
 
 .tech {
-  padding-top: 97px;
-  padding-bottom: 97px;
+  padding: 97px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -306,10 +318,9 @@ body {
   margin: 0 0 16px;
   font-family: 'CirceBold';
   font-style: normal;
-  font-weight: bold;
   font-size: 48px;
   line-height: 52px;
-  color: #233A46;
+  color: var(--primary-color);
 }
 
 .tech__content__text {
@@ -318,7 +329,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   opacity: 0.8;
-  color: #233A46;
+  color: var(--primary-color);
 }
 
 .tech__image {
@@ -331,6 +342,7 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  min-height: 600px;
 }
 
 .doctors__content {
@@ -338,11 +350,22 @@ body {
 }
 
 .doctors__card {
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 0px 10px 40px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.02), 
+              0px 10px 40px rgba(0, 0, 0, 0.04), 
+              0px 2px 6px rgba(0, 0, 0, 0.04),
+              0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
   background-color: #FFFFFF;
-  min-width: 396px;
-  height: 500px;
+  min-width: 320px;
+  flex-basis: 360px;
+  max-width: 360px;
+  margin-right: 24px;
+  height: 100%;
+}
+
+.doctors__card-row {
+  display: flex;
+  margin-right: -24px;
 }
 
 .doctors__card__full-name {
@@ -350,7 +373,7 @@ body {
   font-size: 16px;
   margin: 0;
   line-height: 24px;
-  color: #233A46;
+  color: var(--primary-color);
 }
 
 .doctors__card__description {
@@ -358,7 +381,7 @@ body {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  color: #233A46; 
+  color: var(--primary-color); 
 }
 
 h4 {
@@ -369,5 +392,22 @@ hr {
   opacity: 0.3;
 }
 
+.swiper-container {
+  width: 60%;
+}
 
+.swipe-button {
+  cursor: pointer;
+}
 
+@media screen and (min-width: 1920px) {
+  .container--main {
+    margin: auto 304px;
+  }
+  .nav {
+    padding: 27px 304px 16px;
+  }
+  .video-overlay {
+    margin: 8% 0 0 304px;
+  }
+}
