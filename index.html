@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Воронцов умный</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="app">
@@ -14,36 +14,38 @@
         <source src="video/875.mp4" type="video/mp4">
       </video>
       <div class="container--main">
-        <nav class="nav" :class="{'nav--colored': scrollPosition > 100}">
-          <div class="nav__flex-container">
-            <img class="nav__elem nav__elem--logo" src="img/logo.svg" />
-            <div class="nav__elem">
-              <a href="#" class="nav__link">Услуги и цены</a>
+        <div class="nav" :class="{'nav--colored': scrollPosition > 100}">
+          <nav class="nav__inner">
+            <div class="nav__flex-container">
+              <img class="nav__elem nav__elem--logo" src="img/logo.svg" />
+              <div class="nav__elem">
+                <a href="#" class="nav__link">Услуги и цены</a>
+              </div>
+              <div class="nav__elem">
+                <a href="#" class="nav__link">Вопросы о лечении</a>
+              </div>
+              <div class="nav__elem">
+                <a href="#" class="nav__link">Адрес</a>
+              </div>
             </div>
-            <div class="nav__elem">
-              <a href="#" class="nav__link">Вопросы о лечении</a>
+            <div class="nav__flex-container">
+              <div class="nav__elem">
+                <a href="#" class="nav__whatsapp">WhatsApp</a>
+              </div>
+              <div class="nav__elem">
+                <a href="tel:+7 (499) 372-94-90" class="nav__phone">+7 (499) 372-94-90</a>
+              </div>
+              <div class="nav__elem nav__elem__menu-btn">
+                <svg class="nav__elem__menu-btn__svg" width="94" height="29" viewBox="0 0 94 29" fill="none">
+                  <path class="nav__elem__menu-btn__svg__line" d="M23 17H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path class="nav__elem__menu-btn__svg__line" d="M23 13H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path class="nav__elem__menu-btn__svg__text" d="M34.68 19H36.04V9.992L40.056 15.512H40.264L44.232 9.944V19H45.592V7.8H44.296L40.264 13.544L36.056 7.8H34.68V19ZM54.0976 17.208C53.6336 17.64 52.8176 17.96 51.8896 17.96C50.4816 17.96 49.4896 17.16 49.3776 15.8H54.9136C54.9616 15.576 54.9936 15.288 54.9936 14.936C54.9936 12.952 53.5056 11.64 51.6496 11.64C49.2816 11.64 47.9376 13.304 47.9376 15.4C47.9376 17.672 49.4576 19.16 51.7936 19.16C52.7536 19.16 53.7936 18.856 54.4976 18.216L54.0976 17.208ZM51.5856 12.84C52.8336 12.84 53.6016 13.576 53.6656 14.76H49.2976C49.4416 13.656 50.2736 12.84 51.5856 12.84ZM62.0101 19H63.2901V11.8H62.0101V14.76H58.0101V11.8H56.7301V19H58.0101V15.96H62.0101V19ZM65.6051 19H66.9651V15.96H68.5171C68.7411 17.832 70.1331 19.16 72.1651 19.16C74.3891 19.16 75.9251 17.56 75.9251 15.4C75.9251 13.24 74.4211 11.64 72.1651 11.64C70.1971 11.64 68.8211 12.904 68.5331 14.68H66.9651V11.8H65.6051V19ZM69.9251 15.4C69.9251 13.912 70.8691 12.92 72.2131 12.92C73.5891 12.92 74.4851 13.928 74.4851 15.4C74.4851 16.904 73.5411 17.88 72.2131 17.88C70.8851 17.88 69.9251 16.92 69.9251 15.4Z" fill="white"/>
+                  <rect class="nav__elem__menu-btn__svg__rect" x="0.5" y="0.5" width="93" height="28" rx="1.5" stroke="white" stroke-opacity="0.3"/>
+                </svg>
+              </div>
             </div>
-            <div class="nav__elem">
-              <a href="#" class="nav__link">Адрес</a>
-            </div>
-          </div>
-          <div class="nav__flex-container">
-            <div class="nav__elem">
-              <a href="#" class="nav__whatsapp">WhatsApp</a>
-            </div>
-            <div class="nav__elem">
-              <a href="tel:+7 (499) 372-94-90" class="nav__phone">+7 (499) 372-94-90</a>
-            </div>
-            <div class="nav__elem nav__elem__menu-btn">
-              <svg class="nav__elem__menu-btn__svg" width="94" height="29" viewBox="0 0 94 29" fill="none">
-                <path class="nav__elem__menu-btn__svg__line" d="M23 17H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="nav__elem__menu-btn__svg__line" d="M23 13H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="nav__elem__menu-btn__svg__text" d="M34.68 19H36.04V9.992L40.056 15.512H40.264L44.232 9.944V19H45.592V7.8H44.296L40.264 13.544L36.056 7.8H34.68V19ZM54.0976 17.208C53.6336 17.64 52.8176 17.96 51.8896 17.96C50.4816 17.96 49.4896 17.16 49.3776 15.8H54.9136C54.9616 15.576 54.9936 15.288 54.9936 14.936C54.9936 12.952 53.5056 11.64 51.6496 11.64C49.2816 11.64 47.9376 13.304 47.9376 15.4C47.9376 17.672 49.4576 19.16 51.7936 19.16C52.7536 19.16 53.7936 18.856 54.4976 18.216L54.0976 17.208ZM51.5856 12.84C52.8336 12.84 53.6016 13.576 53.6656 14.76H49.2976C49.4416 13.656 50.2736 12.84 51.5856 12.84ZM62.0101 19H63.2901V11.8H62.0101V14.76H58.0101V11.8H56.7301V19H58.0101V15.96H62.0101V19ZM65.6051 19H66.9651V15.96H68.5171C68.7411 17.832 70.1331 19.16 72.1651 19.16C74.3891 19.16 75.9251 17.56 75.9251 15.4C75.9251 13.24 74.4211 11.64 72.1651 11.64C70.1971 11.64 68.8211 12.904 68.5331 14.68H66.9651V11.8H65.6051V19ZM69.9251 15.4C69.9251 13.912 70.8691 12.92 72.2131 12.92C73.5891 12.92 74.4851 13.928 74.4851 15.4C74.4851 16.904 73.5411 17.88 72.2131 17.88C70.8851 17.88 69.9251 16.92 69.9251 15.4Z" fill="white"/>
-                <rect class="nav__elem__menu-btn__svg__rect" x="0.5" y="0.5" width="93" height="28" rx="1.5" stroke="white" stroke-opacity="0.3"/>
-              </svg>
-            </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
         <div class="video-overlay">
           <h1 class="video-overlay__title primary_heading">Открылись, чтобы подарить вам улыбку</h1>
           <p class="video-overlay__description">Наша стоматология заботится о том, чтобы пациенты были счастливы и здоровы.</p>
@@ -51,7 +53,7 @@
         </div>
         <div class="services">
           <div class="services__elem">
-            <div class="services__elem__image"></div>
+            <img src="img/zub.png" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Импланты и протезы</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -59,7 +61,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
-            <div class="services__elem__image"></div>
+            <img src="img/white_swiss_cross.png" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Лечение зубов</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -67,7 +69,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
-            <img src="img/services_children_dent.png" class="services__elem__image"/>
+            <img src="img/child_dent.svg" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Удаление и реставрация</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -93,7 +95,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
-            <div class="services__elem__image"></div>
+            <img src="img/services_consulting.png" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Консультация</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -101,7 +103,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
-            <div class="services__elem__image"></div>
+            <img src="img/services_teeth_cleaning.png" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Отбеливание</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -109,7 +111,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
           <div class="services__elem">
-            <div class="services__elem__image"></div>
+            <img src="img/services_overbite_fix.png" class="services__elem__image"/>
             <div class="services__elem__text">
               <p class="services__elem__desc card_heading">Гигиена полости рта</p>
               <p class="services__elem__price card_desc">от 10 000 руб.</p>
@@ -122,13 +124,13 @@
           <div class="tech__content">
             <h3 class="tech__content__title">Современные технологии</h3>
             <p class="tech__content__text">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы. Равным образом, граница обучения кадров способствует повышению качества вывода текущих активов. Но интерактивные прототипы, инициированные исключительно синтетически, разоблачены.</p>
-            <a class="swipe-button" onclick="swipeDoctors.slidePrev()">
+            <a class="swipe-button">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20" r="19.375" stroke="var(--primary-color)" stroke-width="1.25"/>
                   <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="var(--primary-color)" stroke-width="1.82857"/>
               </svg>
             </a>
-            <a class="swipe-button" onclick="swipeDoctors.slideNext()">
+            <a class="swipe-button">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="20" fill="var(--primary-color)"/>
                 <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
@@ -139,16 +141,18 @@
         </div>
         <hr>  
         <div class="doctors">
-          <div class="doctors__content">
-            <h3 class="tech__content__title">Наша работа - ваше здоровье</h3>
-            <p class="tech__content__text">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом.</p>
-            <a class="swipe-button" onclick="swipeDoctors.slidePrev()">
+          <div class="doctors__content" :class="{'doctors__content--hide': hideDoctors}">
+            <h3 class="doctors__content__title primary_heading">Наша работа - ваше здоровье</h3>
+            <p class="doctors__content__text primary_desc">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены.</p>
+          </div>
+          <div class="real-controls">
+            <a class="swipe-button" @click="prevSlide">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20" r="19.375" stroke="var(--primary-color)" stroke-width="1.25"/>
                   <path d="M22 25.2856L18 20.1428L22 14.9999" stroke="var(--primary-color)" stroke-width="1.82857"/>
               </svg>
             </a>
-            <a class="swipe-button" onclick="swipeDoctors.slideNext()">
+            <a class="swipe-button" @click="nextSlide">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="20" fill="var(--primary-color)"/>
                 <path d="M18 15L22 20.1429L18 25.2857" stroke="white" stroke-width="1.82857"/>
@@ -163,7 +167,7 @@
               </div>
               <div class="doctors__card swiper-slide">
                 <p class="doctors__card__full-name">asdasda</p>
-                <p class="doctors__card__description">Главный врач, стоматолог, лицо клиники, умный</p>
+                <p class="doctors__card__description"></p>
               </div>
               <div class="doctors__card swiper-slide">
                 <p class="doctors__card__full-name">123123</p>
