@@ -3,7 +3,8 @@ var app = new Vue({
   data: {
     swipeDoctors: null,
     scrollPosition: null,
-    hideDoctors: false
+    hideDoctors: false,
+    overlap: false
   },
   methods: {
   	updateScroll: function () {
@@ -20,14 +21,23 @@ var app = new Vue({
         this.hideDoctors = false;
       else
         this.swipeDoctors.slidePrev();
+    },
+    nextTechSlide: function () {
+      this.overlap = !this.overlap;
     }
   },
   mounted: function () {
   	window.addEventListener('scroll', this.updateScroll);
     this.swipeDoctors = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
+      speed: 400
+    });
+    this.swipeTech = new Swiper('.swiper-container--tech', {
+      slidesPerView: '1',
       speed: 400,
-      slidesOffsetBefore: 30
+      fadeEffect: {
+        crossFade: true
+      }
     });
   }
 });
