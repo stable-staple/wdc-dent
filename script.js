@@ -1,3 +1,6 @@
+var img = new Image();
+img.src = 'img/modern_tech2.png';
+
 var app = new Vue({
   el: '#app',
   data: {

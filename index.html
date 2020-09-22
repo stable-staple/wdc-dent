@@ -17,8 +17,7 @@
         <div class="main-screen__content-wrapper">
           <div class="main-screen__text">
             <h1 class="video-overlay__title primary_heading">Швейцарское качество</h1>
-            <p class="video-overlay__description">Наша клиника использует импланты проверенных годами компаний</p>
-            <button class="video-overlay__btn">Записаться на прием</button>
+            <p class="video-overlay__description primary_desc">Наша клиника использует импланты проверенных годами компаний</p>
           </div>
           <img src="img/main_implants.png" />
           <div class="main-screen__slide-controls">
@@ -55,30 +54,24 @@
         <div class="gradient-filler" v-if="scrollPosition < 200"></div>
         <div class="nav" :class="{'nav--colored': scrollPosition > 200}">
           <nav class="nav__inner">
-            <div class="nav__flex-container">
+            <div class="nav__flex-container medium_header">
               <img class="nav__elem nav__elem--logo" src="img/logo.svg" />
               <div class="nav__elem">
                 <a href="#" class="nav__link">Услуги и цены</a>
               </div>
               <div class="nav__elem">
-                <a href="#" class="nav__link">Вопросы о лечении</a>
+                <a href="#" class="nav__link">Наши врачи</a>
               </div>
               <div class="nav__elem">
-                <a href="#" class="nav__link">Адрес</a>
+                <a href="#" class="nav__link">Акции</a>
+              </div>
+              <div class="nav__elem">
+                <a href="#" class="nav__link">Контакты</a>
               </div>
             </div>
             <div class="nav__flex-container">
-              <div class="nav__elem">
-                <a href="tel:+7 (499) 372-94-90" class="nav__phone">+7 (499) 372-94-90</a>
-              </div>
-              <div class="nav__elem nav__elem__menu-btn">
-                <svg class="nav__elem__menu-btn__svg" width="94" height="29" viewBox="0 0 94 29" fill="none">
-                  <path class="nav__elem__menu-btn__svg__line" d="M23 17H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="nav__elem__menu-btn__svg__line" d="M23 13H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="nav__elem__menu-btn__svg__text" d="M34.68 19H36.04V9.992L40.056 15.512H40.264L44.232 9.944V19H45.592V7.8H44.296L40.264 13.544L36.056 7.8H34.68V19ZM54.0976 17.208C53.6336 17.64 52.8176 17.96 51.8896 17.96C50.4816 17.96 49.4896 17.16 49.3776 15.8H54.9136C54.9616 15.576 54.9936 15.288 54.9936 14.936C54.9936 12.952 53.5056 11.64 51.6496 11.64C49.2816 11.64 47.9376 13.304 47.9376 15.4C47.9376 17.672 49.4576 19.16 51.7936 19.16C52.7536 19.16 53.7936 18.856 54.4976 18.216L54.0976 17.208ZM51.5856 12.84C52.8336 12.84 53.6016 13.576 53.6656 14.76H49.2976C49.4416 13.656 50.2736 12.84 51.5856 12.84ZM62.0101 19H63.2901V11.8H62.0101V14.76H58.0101V11.8H56.7301V19H58.0101V15.96H62.0101V19ZM65.6051 19H66.9651V15.96H68.5171C68.7411 17.832 70.1331 19.16 72.1651 19.16C74.3891 19.16 75.9251 17.56 75.9251 15.4C75.9251 13.24 74.4211 11.64 72.1651 11.64C70.1971 11.64 68.8211 12.904 68.5331 14.68H66.9651V11.8H65.6051V19ZM69.9251 15.4C69.9251 13.912 70.8691 12.92 72.2131 12.92C73.5891 12.92 74.4851 13.928 74.4851 15.4C74.4851 16.904 73.5411 17.88 72.2131 17.88C70.8851 17.88 69.9251 16.92 69.9251 15.4Z" fill="white"/>
-                  <rect class="nav__elem__menu-btn__svg__rect" x="0.5" y="0.5" width="93" height="28" rx="1.5" stroke="white" stroke-opacity="0.3"/>
-                </svg>
-              </div>
+              <a href="tel:+7 (499) 372-94-90" class="nav__elem nav__phone medium_header">+7 (499) 372-94-90</a>
+              <button class="nav__elem nav__elem--appointment-button  ">Записаться на прием</button>
             </div>
           </nav>
         </div>
@@ -121,7 +114,7 @@
             <img class="services__elem__arrow" src="img/services_arrow_right.svg" />
           </div>
         </div>
-        <div class="services">
+        <div class="services services--last-row">
           <div class="services__elem">
             <div class="services__elem__image"></div>
             <div class="services__elem__text">
@@ -159,8 +152,8 @@
         <div class="tech">
           <div class="tech__content">
             <div class="tech__content__textgroup" :class="{'tech__content__textgroup--fade': techContentTransition}">
-              <h3 class="tech__content__title">{{ techSlides[currentTechSlide].techTitle }}</h3>
-              <p class="tech__content__text">{{ techSlides[currentTechSlide].techDesc }}</p>
+              <h3 class="tech__content__title primary_heading">{{ techSlides[currentTechSlide].techTitle }}</h3>
+              <p class="tech__content__text card_desc">{{ techSlides[currentTechSlide].techDesc }}</p>
             </div>
             <div class="tech__slide-controls">
               <a class="swipe-button swipe-button--left" @click="prevTechSlide">
@@ -179,7 +172,6 @@
           </div>
           <div class="tech__image">
             <img :src="techSlides[currentTechSlide].techImgUrl" class="tech__image__inner" />
-            <img src="img/modern_tech2.png" style="display: none;" class="tech__image__inner" />
             <div class="tech__image_overlay" :class="{'tech__image_overlay--scaled': techContentTransition}"></div>
           </div>
         </div>
@@ -187,7 +179,7 @@
         <div class="doctors">
           <div class="doctors__content" :class="{'doctors__content--hide': hideDoctors}">
             <h3 class="doctors__content__title primary_heading">Наша работа - ваше здоровье</h3>
-            <p class="doctors__content__text primary_desc">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены.</p>
+            <p class="doctors__content__text">Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены.</p>
           </div>
           <div class="real-controls">
             <a class="swipe-button swipe-button--left" @click="prevSlide">
