@@ -1,7 +1,7 @@
 :root {
   --primary-color: #2B3033;
   --primary-black: #272727;
-  --main-container-max-width: 1200px;
+  --main-container-max-width: 1314px;
 }
 
 h4 {
@@ -28,6 +28,7 @@ hr {
   opacity: 0.64;
 }
 */
+
 @font-face {
   font-family: 'CirceBold';
   src: url('fonts/Circe-Bold.ttf') format("truetype");
@@ -77,6 +78,7 @@ hr {
 
 .card_heading {
   font-family: 'LitteraTextBold';
+  font-weight: 700;
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
@@ -177,7 +179,9 @@ body {
   vertical-align: top;
   content: url('img/contact_whatsapp.svg');
   margin-right: 4px;
-}*/
+}
+
+*/
 
 .nav__phone {
   text-decoration: none;
@@ -240,6 +244,7 @@ body {
   width: 368px;
   color: #FFFFFF;
   opacity: 0.72;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav__elem--appointment-button {
@@ -274,7 +279,7 @@ body {
 .main-screen {
   display: flex;
   position: relative;
-  height: 690px;
+  height: 800px;
   box-sizing: border-box;
   background-color: var(--primary-black);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -285,13 +290,13 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-right: 12px;
-  width: 350px;
+  width: 512px;
+  margin-left: 65px;
 }
 
 .main-screen__slide-controls {
   position: absolute;
   bottom: 0;
-  right: 0;
 }
 
 .main-screen__social-buttons {
@@ -305,7 +310,6 @@ body {
   position: relative;
   flex-basis: var(--main-container-max-width);
   align-self: center;
-  justify-content: space-around;
   margin: 0 auto 0 auto;
 }
 
@@ -325,9 +329,7 @@ body {
 
 .services__elem {
   margin-right: 24px;
-  min-width: 250px;
-  flex-basis: 260px;
-  max-width: 310px;
+  width: 310px;
   height: 304px;
   border-radius: 10px;
   cursor: pointer;
@@ -366,7 +368,6 @@ body {
 }
 
 .services__elem:hover .services__elem__arrow {
-  visibility: visible;
   opacity: 1;
 }
 
@@ -377,7 +378,7 @@ body {
 
 .services__elem__image {
   display: block;
-  margin: 24px auto 12px;
+  margin: 24px auto 22px;
   width: 200px;
   height: 200px;
 }
@@ -404,8 +405,8 @@ body {
 
 .tech__content {
   opacity: 1;
-  padding-right: 130px;
-  width: 35%;
+  padding-right: 129px;
+  width: 459px;
   height: 100%;
 }
 
@@ -421,7 +422,7 @@ body {
 }
 
 .tech__content__title {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: var(--primary-color);
 }
 
@@ -431,6 +432,7 @@ body {
   font-family: 'LitteraTextRegular';
   font-size: 16px;
   line-height: 24px;
+  width: 400px;
   color: var(--primary-color);
 }
 
@@ -493,7 +495,6 @@ body {
 
 .tech__image {
   position: relative;
-  width: 50%;
   border-radius: 10px;
 }
 
@@ -549,7 +550,7 @@ body {
   padding: 96px 0;
   box-sizing: border-box;
   display: flex;
-  height: 700px;
+  justify-content: space-between;
 }
 
 .doctors__card {
@@ -559,54 +560,81 @@ body {
               0 0 1px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
   background-color: #FFFFFF;
-  width: 396px;
+  width: 310px;
+  height: 456px;
   margin-right: 24px;
   cursor: pointer;
+  position: relative;
   transition: transform 100ms linear;
+  overflow: hidden;
 }
 
 .doctors__card:hover {
   transform: translateY(-5px);
 }
 
+.doctors__card__img {
+  display: block;
+  margin: 63px auto 0;
+  margin-top: 63px;
+}
+
+.doctors__card__textgroup {
+  width: 262px;
+  margin: 0 auto;
+}
+
+.doctors__card__arrow {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  right: 24px;
+  bottom: 20px;
+  transition: opacity 300ms ease-in-out;
+}
+
+.doctors__card:hover .doctors__card__arrow {
+  visibility: visible;
+  opacity: 1;
+}
+
 .doctors__card__full-name {
-  text-align: center;
-  font-family: 'CirceBold';
-  font-size: 16px;
-  margin: 0;
-  line-height: 24px;
+  margin: 0 0 5px;
   color: var(--primary-color);
 }
 
 .doctors__card__description {
-  text-align: center;
   font-family: 'LitteraTextRegular';
-  font-size: 16px;
-  line-height: 24px;
+  opacity: 0.64;
+  font-size: 14px;
+  line-height: 14px;
   margin: 0;
   color: var(--primary-color);
 }
 
 .swiper-container {
-  width: 100%;
   padding: 25px;
+}
+
+.swiper-wrapper {
 }
 
 .real-controls {
   position: absolute;
-  top: 55%;
+  top: 50%;
   z-index: 2;
 }
 
 .doctors__content {
   overflow: hidden;
-  width: 60%;
-  margin-right: 100px;
+  margin-right: 155px;
   opacity: 1;
+  height: 300px;
   transition-delay: 0s, 0s, 0.3s;
   transition-duration: 0.5s, 0.5s, 0.3s;
   transition-property: width, margin-right, opacity;
   box-sizing: border-box;
+  width: 60%;
 }
 
 .doctors__content--hide {
@@ -618,9 +646,8 @@ body {
   transition-property: width, margin-right, opacity;
 }
 
-
 .doctors__content__title {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: var(--primary-color);
 }
 
